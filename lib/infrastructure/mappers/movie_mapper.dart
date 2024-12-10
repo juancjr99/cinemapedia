@@ -1,6 +1,7 @@
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/infrastructure/models/moviedb/movie_details.dart';
 import 'package:cinemapedia/infrastructure/models/moviedb/movie_moviedb.dart';
+import 'package:flutter/material.dart';
 
 class MovieMapper {
 
@@ -17,8 +18,8 @@ class MovieMapper {
   popularity: moviedb.popularity,
   posterPath: (moviedb.posterPath != '')
   ? 'https://image.tmdb.org/t/p/w500${moviedb.posterPath}'
-  : 'no-poster',
-  releaseDate: moviedb.releaseDate,
+  : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoWcWg0E8pSjBNi0TtiZsqu8uD2PAr_K11DA&s',
+  releaseDate: moviedb.releaseDate != null ? moviedb.releaseDate! : DateTime.now(),
   title: moviedb.title,
   video: moviedb.video,
   voteAverage: moviedb.voteAverage,
