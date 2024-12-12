@@ -1,5 +1,4 @@
 
-import 'package:cinemapedia/config/router/app_router.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:cinemapedia/presentation/delegates/search_movie_delegate.dart';
 import 'package:cinemapedia/presentation/providers/providers.dart';
@@ -15,6 +14,7 @@ class CustomAppbar extends ConsumerWidget{
 
     final colors = Theme.of(context).colorScheme;
     final titleStyle = Theme.of(context).textTheme.titleMedium;
+
     return SafeArea(
       bottom: false,
       child: Padding(
