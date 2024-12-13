@@ -12,10 +12,10 @@ class CustomBottomNavigation extends StatelessWidget {
         return 0;
 
       case '/categories':
-        return 0;
+        return 1;
 
       case '/favorite':
-        return 0;    
+        return 2;    
     }
     return 0;
   }
@@ -42,6 +42,7 @@ class CustomBottomNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       elevation: 0,
+      currentIndex: getCurrentIndex(context),
       onTap: (value) => onItemTapped(context,value),
       items: const  [
         BottomNavigationBarItem(
